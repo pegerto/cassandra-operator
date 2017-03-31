@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+
+metadata:
+  name: cassandra-operator
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cassandra-operator
+    spec:
+      containers:
+      - name: cassandra-operator
+        image: pegerto/cassandra-operator:latest
+        imagePullPolicy: Always

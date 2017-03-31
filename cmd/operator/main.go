@@ -1,4 +1,4 @@
-package operator
+package main
 
 import (
 	"github.com/Sirupsen/logrus"
@@ -20,4 +20,3 @@ func main(){
 	c := controller.New(clientset)
 	c.Run()
 }
-

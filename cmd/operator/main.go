@@ -7,7 +7,7 @@ import (
 	"k8s.io/client-go/rest"
 )
 
-func main(){
+func main() {
 	logrus.Info("Starting cassandra-operator")
 
 	config, err := rest.InClusterConfig()

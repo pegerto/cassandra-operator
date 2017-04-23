@@ -2,3 +2,9 @@ language: go
 
 go:
   - 1.8
+
+install:
+  - go build ./cmd/operator
+
+script:
+  - go test -v ./pkg/...

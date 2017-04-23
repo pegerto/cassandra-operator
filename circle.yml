@@ -2,12 +2,10 @@ dependencies:
   override:
     - mkdir -p ~/.go_project/src/github.com/${CIRCLE_PROJECT_USERNAME}
     - ln -s ${HOME}/${CIRCLE_PROJECT_REPONAME} ${HOME}/.go_project/src/github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
-    # './...' is a relative pattern which means all subdirectories
-    - go get -t -d -v ./...
     - go build ./cmd/operator
 
 
 test:
   override:
     # './...' is a relative pattern which means all subdirectories
-    - go test -v -race ./...
+    - go test -v -race ./pkg/...

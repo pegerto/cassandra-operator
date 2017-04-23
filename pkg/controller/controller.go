@@ -2,9 +2,8 @@ package controller
 
 import (
 	"k8s.io/client-go/kubernetes"
-
 	v1beta1extensions "k8s.io/client-go/pkg/apis/extensions/v1beta1"
-	metav1 "k8s.io/client-go/pkg/api/v1"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"github.com/Sirupsen/logrus"
 )
 

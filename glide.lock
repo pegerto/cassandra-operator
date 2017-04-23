@@ -1,10 +1,6 @@
 hash: 0aa08903c79a11d29cf0fe78930b59489c7ff7d6ca81ceeb6e184bac64883c83
-updated: 2017-04-23T01:14:47.053327487+01:00
+updated: 2017-04-23T02:00:18.921389843+01:00
 imports:
-- name: github.com/davecgh/go-spew
-  version: 5215b55f46b2b919f50a1df0eaa5886afe4e3b3d
-  subpackages:
-  - spew
 - name: github.com/docker/distribution
   version: cd27f179f2c10c5d300e6d09025b538c475b0d51
   subpackages:
@@ -26,7 +22,7 @@ imports:
 - name: github.com/go-openapi/swag
   version: 1d0bd113de87027671077d3c71eb3ac5d7dbba72
 - name: github.com/gogo/protobuf
-  version: e18d7aa8f8c624c915db340349aad4c49b10d173
+  version: c0656edd0d9eab7c66d1eb0c568f9039345796f7
   subpackages:
   - proto
   - sortkeys
@@ -53,7 +49,7 @@ imports:
 - name: github.com/Sirupsen/logrus
   version: 10f801ebc38b33738c9d17d50860f484a0988ff5
 - name: github.com/spf13/pflag
-  version: 5ccb023bc27df288a957c5e994cd44fd19619465
+  version: 9ff6c6923cfffbcd502984b8e0c80539a94968b7
 - name: github.com/ugorji/go
   version: ded73eae5db7e7a0ef6f55aace87a2873c5d2b74
   subpackages:
@@ -63,7 +59,7 @@ imports:
   subpackages:
   - ssh/terminal
 - name: golang.org/x/net
-  version: e90d6d0afc4c315a0d87a568ae68577cc15149a0
+  version: f2499483f923065a842d38eb4c7f1927e6fc6e6d
   subpackages:
   - context
   - context/ctxhttp
@@ -93,7 +89,7 @@ imports:
 - name: gopkg.in/yaml.v2
   version: 53feefa2559fb8dfa8d81baad31be332c97d6c77
 - name: k8s.io/apimachinery
-  version: d90aa2c8531f13b0ca734845934c10dcb6a56ca7
+  version: 506b12e23ffcc3647a5766f48894c9e04c2ab67c
   subpackages:
   - pkg/api/equality
   - pkg/api/errors
@@ -140,10 +136,11 @@ imports:
   - third_party/forked/golang/json
   - third_party/forked/golang/reflect
 - name: k8s.io/client-go
-  version: 6500775c58c43486978291879ac9e1b0e9fc953f
+  version: 1aa489224eed709d6131f12b3a672037a3eff826
   subpackages:
   - discovery
   - kubernetes
+  - kubernetes/scheme
   - kubernetes/typed/apps/v1beta1
   - kubernetes/typed/authentication/v1
   - kubernetes/typed/authentication/v1beta1
@@ -159,11 +156,14 @@ imports:
   - kubernetes/typed/policy/v1beta1
   - kubernetes/typed/rbac/v1alpha1
   - kubernetes/typed/rbac/v1beta1
+  - kubernetes/typed/settings/v1alpha1
+  - kubernetes/typed/storage/v1
   - kubernetes/typed/storage/v1beta1
   - pkg/api
   - pkg/api/errors
   - pkg/api/install
   - pkg/api/v1
+  - pkg/api/v1/ref
   - pkg/apis/apps
   - pkg/apis/apps/install
   - pkg/apis/apps/v1beta1
@@ -196,11 +196,14 @@ imports:
   - pkg/apis/rbac/install
   - pkg/apis/rbac/v1alpha1
   - pkg/apis/rbac/v1beta1
+  - pkg/apis/settings
+  - pkg/apis/settings/install
+  - pkg/apis/settings/v1alpha1
   - pkg/apis/storage
   - pkg/apis/storage/install
+  - pkg/apis/storage/v1
   - pkg/apis/storage/v1beta1
   - pkg/util
-  - pkg/util/labels
   - pkg/util/parsers
   - pkg/version
   - rest

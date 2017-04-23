@@ -40,7 +40,7 @@ func (c *Controller) createTPR() error {
 	}
 
 	_, err := c.client.ExtensionsV1beta1().ThirdPartyResources().Create(tpr)
-	if err != nil {
+	if err != nil  {
 		logrus.Error("Error creating TPR:", err)
 	}
 

@@ -1,6 +1,0 @@
-{
-	"ImportPath": "github.com/pegerto/cassandra-operator",
-	"GoVersion": "go1.8",
-	"GodepVersion": "v75",
-	"Deps": []
-}

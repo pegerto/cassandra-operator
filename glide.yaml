@@ -1,0 +1,11 @@
+package: github.com/pegerto/cassandra-operator
+import:
+- package: github.com/Sirupsen/logrus
+- package: k8s.io/client-go
+  subpackages:
+  - kubernetes
+  - pkg/api/errors
+  - pkg/api/v1
+  - pkg/apis/extensions/v1beta1
+  - rest
+  - tools/clientcmd

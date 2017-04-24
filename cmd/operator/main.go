@@ -1,15 +1,13 @@
 package main
 
 import (
+	"flag"
 	"github.com/Sirupsen/logrus"
 	"github.com/pegerto/cassandra-operator/pkg/controller"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
-	"flag"
 	"k8s.io/client-go/tools/clientcmd"
 )
-
-
 
 func main() {
 	logrus.Info("Starting cassandra-operator")
@@ -22,7 +20,7 @@ func main() {
 	if !*outside {
 		config, err = rest.InClusterConfig()
 	} else {
-		config, err = clientcmd.BuildConfigFromFlags("",clientcmd.RecommendedHomeFile)
+		config, err = clientcmd.BuildConfigFromFlags("", clientcmd.RecommendedHomeFile)
 	}
 
 	if err != nil {

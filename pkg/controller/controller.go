@@ -1,11 +1,11 @@
 package controller
 
 import (
+	"github.com/Sirupsen/logrus"
+	apierrors "k8s.io/apimachinery/pkg/api/errors"
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	v1beta1extensions "k8s.io/client-go/pkg/apis/extensions/v1beta1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	apierrors "k8s.io/apimachinery/pkg/api/errors"
-	"github.com/Sirupsen/logrus"
 )
 
 type Controller struct {
@@ -23,7 +23,7 @@ func (c *Controller) Run() {
 }
 
 func (c *Controller) initResource() {
-	c.createTPR();
+	c.createTPR()
 
 }
 
@@ -40,9 +40,9 @@ func (c *Controller) createTPR() error {
 	}
 
 	_, err := c.client.ExtensionsV1beta1().ThirdPartyResources().Create(tpr)
-	if err != nil && !apierrors.IsAlreadyExists( err ) {
+	if err != nil && !apierrors.IsAlreadyExists(err) {
 		logrus.Error("Error creating TPR:", err)
 	}
 
-	return err;
+	return err
 }

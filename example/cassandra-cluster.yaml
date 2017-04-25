@@ -1,0 +1,7 @@
+apiVersion: "pegerto.com/v1"
+kind: CassandraCluster
+metadata:
+  name: cassandra-dev-cluster
+clusterSpec:
+  size: 3
+  version: 3.10

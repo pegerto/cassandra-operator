@@ -31,10 +31,10 @@ func (c *Controller) createTPR() error {
 
 	tpr := &v1beta1extensions.ThirdPartyResource{
 		ObjectMeta: metav1.ObjectMeta{
-			Name: "cluster.cassandra.com",
+			Name: "cassandra-cluster.pegerto.com",
 		},
 		Versions: []v1beta1extensions.APIVersion{
-			{Name: "v1beta1"},
+			{Name: "v1"},
 		},
 		Description: "Manage cassandra clusters",
 	}

@@ -1,19 +1,25 @@
 package controller
 
 import (
-	"k8s.io/client-go/kubernetes"
+	"time"
+	opkit "github.com/rook/operator-kit"
 )
 
 type Controller struct {
-	client *kubernetes.Clientset
+	context   opkit.KubeContext
 }
 
-func New() *Controller {
+func New(ctx opkit.KubeContext) *Controller {
 	return &Controller{
+		context: ctx,
 	}
 }
 
 func (c *Controller) Run() {
+	for {
 
+
+		<-time.After(time.Second * time.Duration(c.context.RetryDelay))
+	}
 }
 

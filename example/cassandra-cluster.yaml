@@ -1,5 +1,5 @@
-apiVersion: "pegerto.com/v1"
-kind: CassandraCluster
+apiVersion: "cassandra.opencredo.com/v1alpha1"
+kind: Cluster
 metadata:
   name: cassandra-dev-cluster
 clusterSpec:

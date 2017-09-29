@@ -29,8 +29,7 @@ func main() {
 		os.Exit(1)
 	}
 
-
-	c := controller.New()
+	c := controller.New(*context)
 	c.Run()
 }
 
